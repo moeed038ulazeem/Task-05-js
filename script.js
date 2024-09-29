@@ -13,7 +13,7 @@ document.getElementById('calculate').addEventListener('click', function() {
 
     if (days < 0) {
         months--;
-        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); // Days in previous month
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); 
     }
 
     if (months < 0) {
