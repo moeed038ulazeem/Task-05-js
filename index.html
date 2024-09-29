@@ -9,10 +9,16 @@
 <body>
     <div class="container">
         <h1>Age Calculator</h1>
-        <label for="dob">Enter your date of birth:</label>
-        <input type="date" id="dob">
-        <button id="calculate">Calculate Age</button>
-        <h2 id="result"></h2>
+        <div class="input-row">
+            <label for="dob">Enter your date of birth:</label>
+            <input type="date" id="dob">
+            <button id="calculate">Calculate</button>
+        </div>
+        <div class="result">
+            <div class="box" id="years">Years: 0</div>
+            <div class="box" id="months">Months: 0</div>
+            <div class="box" id="days">Days: 0</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

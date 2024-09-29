@@ -19,12 +19,18 @@ h1 {
     margin-bottom: 20px;
 }
 
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 input[type="date"] {
     padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    flex-grow: 1;
 }
 
 button {
@@ -40,6 +46,17 @@ button:hover {
     background-color: #0056b3;
 }
 
-h2 {
+.result {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
+}
+
+.box {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    width: 30%;
+    text-align: center;
 }

@@ -3,7 +3,7 @@ document.getElementById('calculate').addEventListener('click', function() {
     const today = new Date();
 
     if (!dob) {
-        document.getElementById('result').innerText = 'Please enter a valid date.';
+        alert('Please enter a valid date.');
         return;
     }
 
@@ -21,5 +21,7 @@ document.getElementById('calculate').addEventListener('click', function() {
         months += 12;
     }
 
-    document.getElementById('result').innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
+    document.getElementById('years').innerText = `Years: ${years}`;
+    document.getElementById('months').innerText = `Months: ${months}`;
+    document.getElementById('days').innerText = `Days: ${days}`;
 });
