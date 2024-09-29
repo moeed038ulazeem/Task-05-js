@@ -1,15 +1,15 @@
 document.getElementById('calculate').addEventListener('click', function() {
-    const dob = new Date(document.getElementById('dob').value);
-    const today = new Date();
+    var dob = new Date(document.getElementById('dob').value);
+    var today = new Date();
 
     if (!dob) {
         alert('Please enter a valid date.');
         return;
     }
 
-    let years = today.getFullYear() - dob.getFullYear();
-    let months = today.getMonth() - dob.getMonth();
-    let days = today.getDate() - dob.getDate();
+    var years = today.getFullYear() - dob.getFullYear();
+    var months = today.getMonth() - dob.getMonth();
+    var days = today.getDate() - dob.getDate();
 
     if (days < 0) {
         months--;
