@@ -1,19 +1,25 @@
 document.getElementById('calculate').addEventListener('click', function() {
-    const birthdate = document.getElementById('birthdate').value;
-    if (!birthdate) {
-        document.getElementById('result').innerText = "Please enter a valid birth date.";
+    const dob = new Date(document.getElementById('dob').value);
+    const today = new Date();
+
+    if (!dob) {
+        document.getElementById('result').innerText = 'Please enter a valid date.';
         return;
     }
 
-    const birthDateObj = new Date(birthdate);
-    const today = new Date();
+    let years = today.getFullYear() - dob.getFullYear();
+    let months = today.getMonth() - dob.getMonth();
+    let days = today.getDate() - dob.getDate();
 
-    let age = today.getFullYear() - birthDateObj.getFullYear();
-    const monthDiff = today.getMonth() - birthDateObj.getMonth();
-
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
-        age--;
+    if (days < 0) {
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); // Days in previous month
     }
 
-    document.getElementById('result').innerText = `You are ${age} years old.`;
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.getElementById('result').innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
 });
