@@ -15,9 +15,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin-bottom: 20px;
-}
+
 
 .input-row {
     display: flex;
@@ -25,18 +23,23 @@ h1 {
     margin-bottom: 20px;
     background-color: black;
     color: white;
-    height: 80px;
-    width: 500px;
+    height: 150px;
+    width: 400px;
     border-radius: 10px;
 }
 
 input[type="date"] {
     padding: 10px;
-    margin-right: 10px;
+    margin-left: 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    margin: 10%;
+    width: 40%;
+
+    
 }
+
 
 button {
     padding: 10px 15px;
