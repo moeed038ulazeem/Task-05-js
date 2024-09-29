@@ -3,7 +3,7 @@ document.getElementById('calculate').addEventListener('click', function() {
     var today = new Date();
 
     if (!dob) {
-        alert('Please enter a valid date.');
+        alert('Please Enter a Valid Date!');
         return;
     }
 
